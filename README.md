@@ -11,7 +11,7 @@ by Thane Vo
 A brief summarization of what ZodaPop is:
 
 > A basic PHP implementation of ActiveRececord, lighty sweetened with syntatic sugar, for the Zoho Reports cloud database API.
-> Active Record is an implementation of the object-relational mapping (ORM) pattern by the same name described by Martin Fowler
+> Active Record is an implementation of the object-relational mapping (ORM) pattern by the same name described by Martin Fowler.
 > Active Record attempts to provide a coherent wrapper as a solution for the inconvenience that is object-relational mapping.
 > A database table or view is wrapped into a class, thus an object instance is tied to a single row in the table. 
 > After creation of an object, a new row is added to the table upon save. Any object loaded gets its information from the database; 
