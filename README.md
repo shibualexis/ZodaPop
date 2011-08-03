@@ -76,10 +76,8 @@ the record in your cloud database but you can still use the object if you need t
 	// bring back from the dead
     $activerecord_instance->save();
 	
-## Usage ##
-### Example ###
+## Example Usage ##
 
-<?php
 require_once __DIR__ . '/ZodaPop/ZodaPop.php';
 
 Connection::setLoginName( '<Your Login Name Here>' );
@@ -126,7 +124,6 @@ $existing_record_deleted = $destroy_me->destroy();
 $found_by_id = ZodaPop::find_by_id( 1867 );
 $found_by_Campaign = ZodaPop::find_by_Campaign( 'some campaign' );
 $found_by_num_clicks = ZodaPop::find_by_Clicks( 89059 );
-?>
 
 ## TODOs ##
 
