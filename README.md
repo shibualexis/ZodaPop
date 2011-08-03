@@ -76,7 +76,8 @@ the record in your cloud database but you can still use the object if you need t
 	// bring back from the dead
     $activerecord_instance->save();
 	
-## Example Usage ##
+## Usage ##
+### Example ###
 
 <?php
 require_once __DIR__ . '/ZodaPop/ZodaPop.php';
