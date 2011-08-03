@@ -78,13 +78,14 @@ the record in your cloud database but you can still use the object if you need t
 	
 ## Example Usage ##
 
+<?php
 require_once __DIR__ . '/ZodaPop/ZodaPop.php';
 
-Connection::setLoginName( '<Your Login Name Here>' );
-Connection::setPassword( '<Your Password Here>' );
-Connection::setAPIKey( '<Your API key Here>' );
-Connection::setDatabase( '<name of database here>' );
-Connection::setTable( '<name of database table here>' );
+Connection::setLoginName( 'Your Login Name Here' );
+Connection::setPassword( 'Your Password Here' );
+Connection::setAPIKey( 'Your API key Here' );
+Connection::setDatabase( 'name of database here' );
+Connection::setTable( 'name of database table here' );
 
 $active_record = new ZodaPop();
 
@@ -124,6 +125,7 @@ $existing_record_deleted = $destroy_me->destroy();
 $found_by_id = ZodaPop::find_by_id( 1867 );
 $found_by_Campaign = ZodaPop::find_by_Campaign( 'some campaign' );
 $found_by_num_clicks = ZodaPop::find_by_Clicks( 89059 );
+?>
 
 ## TODOs ##
 
