@@ -19,7 +19,7 @@ A brief summarization of what ZodaPop is:
 > properties for each column in the table.
 
 Zoho Reports cloud database API can be found [here](http://zohoreportsapi.wiki.zoho.com/).
-More details can be found [here](http://en.wikipedia.org/wiki/Active_record_pattern).
+More details about ActiveRecord can be found [here](http://en.wikipedia.org/wiki/Active_record_pattern).
 
 ## Minimum Requirements ##
 
@@ -84,7 +84,7 @@ the record in your cloud database but you can still use the object if you need t
 	Connection::setPassword( 'Your Password Here' );
 	Connection::setAPIKey( 'Your API key Here' );
 	Connection::setDatabase( 'name of database here' );
-	Connection::setTable( 'name of database table here' );
+	Connection::setTable( 'name of database table here' ); // tables must have a column named 'id' set to autonumber
 
 	$active_record = new ZodaPop();
 
