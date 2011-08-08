@@ -88,39 +88,42 @@ Connection::setTable( 'name of database table here' );
 
 $active_record = new ZodaPop();
 
-/* creates new row in cloud database, $new_row equals true if row was created */
-/* keys in data array must correspond to actual names of table columns */
+> creates new row in cloud database, $new_row equals true if row was created 
+> keys in data array must correspond to actual names of table columns 
 $new_row = $active_record->create( array( 'Campaign' => 'New advertising campaign', 'AdGroup' => 'Techies' ) );
 
-/* find a particular row by primary key 'id' in table */
-/* $target_row is an ZodaPop instance that contains the rows data if record is found */
+> find a particular row by primary key 'id' in table 
+> $target_row is an ZodaPop instance that contains the rows data if record is found 
 $target_row = ZodaPop::find( array( "id" => '4540' ) );
 
-/* retrieving values of particular columns in record */
-/* all the getter and getter functions are dynamically created */
-/* corresponding to the given database table schema information */
+> retrieving values of particular columns in record 
+> all the getter and getter functions are dynamically created 
+> corresponding to the given database table schema information 
 
-$campaign_name = $target_row->Campaign; /* returns string */
-$ad_group = $target_row->AdGroup; /* returns string */
-$number_of_clicks = $target_row->Clicks; /* returns double */
+> returns string
+$campaign_name = $target_row->Campaign;  
+> returns string
+$ad_group = $target_row->AdGroup; 
+> returns double
+$number_of_clicks = $target_row->Clicks; 
 
-/* updating values of particular columns in record */
+> updating values of particular columns in record 
 $target_row->Campaign = "Updated advertising campaign";
 $target_row->AdGroup = "superceded ad group";
 $target_row->Clicks = 1000;
 
-/* do an update on existing record on cloud database */
-/* $existing_row_updated equals true if columns were updated */
+> do an update on existing record on cloud database 
+> $existing_row_updated equals true if columns were updated 
 $existing_row_updated = $target_row->save();
 
-/* find the row we've created above */
+> find the row we've created above 
 $destroy_me = ZodaPop::find( array( 'Campaign' => 'Updated advertising campaign', 'AdGroup' => 'superceded ad group' ) );
 
-/* destroy this particular row in cloud database */
-/* $existing_record_deleted is true if record was deleted */
+> destroy this particular row in cloud database 
+> $existing_record_deleted is true if record was deleted 
 $existing_record_deleted = $destroy_me->destroy();
 
-/* finding with dynamic finders */
+> finding with dynamic finders 
 $found_by_id = ZodaPop::find_by_id( 1867 );
 $found_by_Campaign = ZodaPop::find_by_Campaign( 'some campaign' );
 $found_by_num_clicks = ZodaPop::find_by_Clicks( 89059 );
